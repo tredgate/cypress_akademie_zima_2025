@@ -15,14 +15,3 @@ describe("Operating with Cypress Tests", () => {
     cy.get("#username2");
   });
 });
-
-/*
-
-Cvičení - ztracené heslo (⌛10:00)
-Vytvořte novou složku cypress/e2e/exercises
-Vytvořte v ní nový test soubor “lost_password_tests.cy.js”
-Vytvořte describe “Lost passwords tests”
-Vytvořte it “Lost password test”
-Otevřete pmtool, klikněte forgotten password, vyplňte nejdříve e-mail: test@tredgate.cz, poté username: test a potvrďte.
-
-*/
