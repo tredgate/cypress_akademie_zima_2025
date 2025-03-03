@@ -2,6 +2,9 @@ import { DashboardPage } from "../../page-objects/pmtool/dashboard_page.js";
 import { LoginPage } from "../../page-objects/pmtool/login_page.js";
 
 describe("Login and Logout Tests", () => {
+  beforeEach(() => {
+      
+  });
   it("Login to pmtool", () => {
     const pmtool = new LoginPage();
     pmtool.openPmtool();

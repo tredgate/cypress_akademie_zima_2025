@@ -2,9 +2,11 @@ import { LoginPage } from "../../page-objects/pmtool/login_page.js";
 
 //login_tests_fluent.cy.js
 describe("Fluent Login Tests", () => {
+  beforeEach(() => {
+      new LoginPage().openPmtool();
+  });
   it("PMTool login - Fluent API", () => {
     new LoginPage()
-      .openPmtool()
       .typeUsername("cypress_zima_2024")
       .typePassword("Zima2024Cypress")
       .clickLogin();
@@ -12,13 +14,16 @@ describe("Fluent Login Tests", () => {
 
   it("PMTool login and logout - Fluent API", () => {
     new LoginPage()
-      .openPmtool()
       .typeUsername("cypress_zima_2024")
       .typePassword("Zima2024Cypress")
       .clickLogin()
       .clickProfile()
       .clickLogout();
   });
+
+  it("Open lost password and get back to login", () => {
+    new LoginPage().clickLostPassword().clickBack()
+  })
 });
 
 /*
