@@ -19,10 +19,11 @@ describe("Login and Logout Tests", () => {
 
   it.only("Pmtool Login and Logout test", () => {
     const loginPage = new LoginPage();
-    const dashboardPage = new DashboardPage();
 
     loginPage.openPmtool();
     loginPage.login("cypress_zima_2024", "Zima2024Cypress");
+
+    const dashboardPage = new DashboardPage();
     dashboardPage.clickProfile();
     dashboardPage.clickLogout();
   });
