@@ -35,8 +35,7 @@ export class LoginPage {
   login(username, password) {
     this.typeUsername(username);
     this.typePassword(password);
-    this.clickLogin();
-    return new DashboardPage();
+    return this.clickLogin();
   }
 
   clickLostPassword() {

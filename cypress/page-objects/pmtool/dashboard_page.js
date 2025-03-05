@@ -7,7 +7,7 @@ export class DashboardPage {
     this.logoutButton = "#logout";
     this.projectLink = "#Projects";
     this.welcomePageHeader = "#welcome-page-header";
-    cy.get(this.welcomePageHeader).should("be.visible")
+    cy.get(this.welcomePageHeader).should("be.visible");
   }
 
   clickProfile() {
@@ -21,7 +21,7 @@ export class DashboardPage {
   }
 
   clickProjectLink() {
-    cy.get(this. projectLink).click();
+    cy.get(this.projectLink).click();
     return new ProjectsPage();
   }
 }
