@@ -3,7 +3,7 @@ import { LoginPage } from "../../page-objects/pmtool/login_page.js";
 //login_tests_fluent.cy.js
 describe("Fluent Login Tests", () => {
   beforeEach(() => {
-      new LoginPage().openPmtool();
+    new LoginPage().openPmtool();
   });
   it("PMTool login - Fluent API", () => {
     new LoginPage()
@@ -22,8 +22,8 @@ describe("Fluent Login Tests", () => {
   });
 
   it("Open lost password and get back to login", () => {
-    new LoginPage().clickLostPassword().clickBack()
-  })
+    new LoginPage().clickLostPassword().clickBack();
+  });
 });
 
 /*
