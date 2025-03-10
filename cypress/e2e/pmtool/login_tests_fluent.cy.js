@@ -2,20 +2,24 @@ import { LoginPage } from "../../page-objects/pmtool/login_page.js";
 
 //login_tests_fluent.cy.js
 describe("Fluent Login Tests", () => {
+  const pmtoolUsername = Cypress.env("pmtool_username");
+  const pmtoolPassword = Cypress.env("pmtool_password");
+
   beforeEach(() => {
     new LoginPage().openPmtool();
   });
+
   it("PMTool login - Fluent API", () => {
     new LoginPage()
-      .typeUsername("cypress_zima_2024")
-      .typePassword("Zima2024Cypress")
+      .typeUsername(pmtoolUsername)
+      .typePassword(pmtoolPassword)
       .clickLogin();
   });
 
   it("PMTool login and logout - Fluent API", () => {
     new LoginPage()
-      .typeUsername("cypress_zima_2024")
-      .typePassword("Zima2024Cypress")
+      .typeUsername(pmtoolUsername)
+      .typePassword(pmtoolPassword)
       .clickLogin()
       .clickProfile()
       .clickLogout();
