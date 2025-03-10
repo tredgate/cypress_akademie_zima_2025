@@ -16,3 +16,17 @@ describe("Login Page Tests with Asserts", () => {
       .clickLogout();
   });
 });
+
+/*
+Nová branch
+debugging_advanced_cypress
+Nové složky
+cypress/e2e/learning/debugging
+cypress/e2e/learning/advanced-features
+
+Git push
+Pull request
+Checkout main
+Pull
+Checkout 
+*/

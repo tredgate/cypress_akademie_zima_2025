@@ -1,27 +1,10 @@
-import { LoginPage } from "./login_page.js";
+import { HeaderSection } from "./common/header_section.js";
 import { ProjectsPage } from "./projects_page.js";
 
-export class DashboardPage {
+export class DashboardPage extends HeaderSection {
   constructor() {
-    this.profileButton = "#user_dropdown";
-    this.logoutButton = "#logout";
-    this.projectLink = "#Projects";
+    super(); // ? super() - provolání děděného constructoru, je povinný a musí být vždy v constructor() na prvním místě.
     this.welcomePageHeader = "#welcome-page-header";
     cy.get(this.welcomePageHeader).should("be.visible");
-  }
-
-  clickProfile() {
-    cy.get(this.profileButton).click();
-    return this;
-  }
-
-  clickLogout() {
-    cy.get(this.logoutButton).click();
-    return new LoginPage();
-  }
-
-  clickProjectLink() {
-    cy.get(this.projectLink).click();
-    return new ProjectsPage();
   }
 }
