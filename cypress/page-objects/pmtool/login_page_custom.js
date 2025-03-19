@@ -2,8 +2,9 @@ import { customElement } from "../../helpers/custom_element.js";
 import { DashboardPage } from "./dashboard_page.js";
 import { LostPasswordPage } from "./lost_password_page.js";
 
-//login_page.js
-export class LoginPage {
+// TODO: zduplikovat (CTRL + C, CTRL + V) login_page.js, nový soubor přejmenovat na: login_page_custom.js
+// TODO: Přejmenovat třídu LoginPage na LoginPageCustom v login_page_custom.js
+export class LoginPageCustom {
   constructor() {
     this.pmtoolUrl = "https://tredgate.com/pmtool"; // ! URL se dává pouze do prvního (vstupního) Page Objectu odkud otvíráme aplikaci
     this.usernameInput = customElement("#username");
@@ -45,60 +46,4 @@ export class LoginPage {
     this.lostPasswordAnchor.click();
     return new LostPasswordPage();
   }
-
-  pageHeaderHasText(headerText) {
-    this.pageHeader.haveText(headerText);
-    return this;
-  }
-
-  usernameIsVisible() {
-    this.usernameInput.isVisible();
-    return this;
-  }
-
-  usernameHavePlaceholder(placeholder) {
-    this.usernameInput.havePlaceholder(placeholder);
-    return this;
-  }
-
-  usernameHaveValue(value) {
-    this.usernameInput.haveValue(value);
-    return this;
-  }
-
-  passwordIsVisible() {
-    this.passwordInput.isVisible();
-    return this;
-  }
-
-  passwordHasPlaceholder(placeholder) {
-    this.passwordInput.havePlaceholder(placeholder);
-    return this;
-  }
-
-  logoIsVisible() {
-    this.logoImg.isVisible();
-    return this;
-  }
-
-  alertIsVisible() {
-    this.alertDiv.isVisible();
-    return this;
-  }
-
-  alertHasText(alertText) {
-    this.alertDiv.containsText(alertText);
-    return this;
-  }
 }
-
-/*
-Merge mezi větvemi:
-git add .
-git commit
-git fetch
-git merge origin/main 
-^-- merge github main vetve (aktualizovano pres git fetch)
-git merge main
-^-- merge lokalni main
-*/

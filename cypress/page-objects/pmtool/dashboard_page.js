@@ -26,6 +26,10 @@ export class DashboardPage extends HeaderSection {
      4. Až po constructoru by se zavolal visit()
     */
   }
+  welcomePageHeaderIsVisible() {
+    cy.get(this.welcomePageHeader).should("be.visible");
+    return this;
+  }
 }
 
 /*
