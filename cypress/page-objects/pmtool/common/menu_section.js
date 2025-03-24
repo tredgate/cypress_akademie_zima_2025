@@ -1,8 +1,9 @@
-//menu_section.js
-//page-objects/pmtool/common/
+import { BasePage } from "./base_page.js";
+
 // ! V této tříde nesmí být přímý import na žádnou page, která dědí HeaderSection nebo MenuSection
-export class MenuSection {
-  constructor() {
+export class MenuSection extends BasePage {
+  constructor(path) {
+    super(path);
     this.projectLink = "#Projects";
     this.dashboardLink = "#dashboard";
   }
