@@ -6,6 +6,7 @@ module.exports = defineConfig({
     eshop_url: "https://tredgate.com/eshop",
     webtrain_url: "https://tredgate.com/webtrain",
     automation_test_store_url: "https://automationteststore.com/",
+    tegb_url: "http://localhost:3001",
   },
   e2e: {
     setupNodeEvents(on, config) {
