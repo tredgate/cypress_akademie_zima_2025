@@ -1,0 +1,18 @@
+[
+  {
+    "_id": "123456",
+    "userId": 1,
+    "accountId": "Ahoooj",
+    "balance": 55665141,
+    "transactionLimits": {
+      "dailyLimit": 10000,
+      "monthlyLimit": 50000,
+      "_id": "654321"
+    },
+    "accountType": "MOCK ÚČET Péťa",
+    "loginHistory": [],
+    "transactionHistory": [],
+    "createdAt": "2023-05-06T21:05:38.291Z",
+    "__v": 0
+  }
+]

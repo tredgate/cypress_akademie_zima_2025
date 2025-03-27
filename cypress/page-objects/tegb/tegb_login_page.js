@@ -1,4 +1,5 @@
 import { customElement } from "../../helpers/custom_element.js";
+import { DashboardPage } from "./dashboard_page.js";
 
 export class TegBLoginPage {
   constructor() {
@@ -6,6 +7,7 @@ export class TegBLoginPage {
     this.usernameInput = customElement("input[data-testid='username']");
     this.passwordInput = customElement("input[data-testid='password']");
     this.loginButton = customElement("button[data-testid='log_in']");
+    cy.intercept("/auth/login").as("tegb_login_api");
   }
 
   openTegb() {
@@ -25,7 +27,7 @@ export class TegBLoginPage {
 
   clickLogin() {
     this.loginButton.click();
-    //TODO Add correct return object after it is implemented
-    return this;
+    cy.wait("@tegb_login_api");
+    return new DashboardPage();
   }
 }
