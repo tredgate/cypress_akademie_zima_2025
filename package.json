@@ -18,6 +18,7 @@
     "globals": "^16.0.0"
   },
   "dependencies": {
-    "cypress-real-events": "^1.14.0"
+    "cypress-real-events": "^1.14.0",
+    "moment": "^2.30.1"
   }
 }
